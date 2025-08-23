@@ -1,9 +1,9 @@
 [
   {
-    "title": "AI Studio: Interactive Full Course for Python & AI",
-    "description": "Embark on your journey into artificial intelligence with this complete, interactive Python course. This web-based studio guides you from the fundamental concepts of Python—such as variables, data types, functions, and loops—all the way to training a basic AI model. The hands-on interface allows you to run code directly in your browser, providing instant feedback and a practical learning experience.",
-    "tags": ["Python", "AI", "Machine Learning", "Online Course", "React", "Interactive Learning"],
-    "imageUrl": "https://picsum.photos/seed/python-course-ai/600/400",
-    "iframeUrl": "https://atozproductservices.github.io/files/ai_studio_code.html"
+    "title": "Python Full Course",
+    "description": "A comprehensive and interactive online course offering a structured curriculum from beginner to advanced Python concepts, complete with explanations, code examples, and progress tracking. This platform facilitates learning Python through modules covering fundamentals, data structures, OOP, and advanced patterns.",
+    "tags": ["Python Course", "Learn Python", "Python Tutorial"],
+    "imageUrl": "https://raw.githubusercontent.com/ILoveTalk/ILoveTalk/refs/heads/main/images/python-full-course.jfif",
+    "iframeUrl": "https://ilovetalk.github.io/ILoveTalk/websites/python-full-course/"
   }
 ]
