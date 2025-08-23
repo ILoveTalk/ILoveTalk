@@ -1,0 +1,9 @@
+[
+  {
+    "title": "AI Studio: Interactive Full Course for Python & AI",
+    "description": "Embark on your journey into artificial intelligence with this complete, interactive Python course. This web-based studio guides you from the fundamental concepts of Python—such as variables, data types, functions, and loops—all the way to training a basic AI model. The hands-on interface allows you to run code directly in your browser, providing instant feedback and a practical learning experience.",
+    "tags": ["Python", "AI", "Machine Learning", "Online Course", "React", "Interactive Learning"],
+    "imageUrl": "https://picsum.photos/seed/python-course-ai/600/400",
+    "iframeUrl": "https://atozproductservices.github.io/files/ai_studio_code.html"
+  }
+]
