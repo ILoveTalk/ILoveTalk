@@ -30,6 +30,9 @@
 <body>
     <div id="root"></div>
 
+    <!-- Ad Blocker Detector Bait Element -->
+    <div id="ad-test-container" class="adsbox" style="height: 1px; position: absolute; left: -9999px; top: -9999px;"></div>
+
     <script type="text/babel">
 
         const { useState, useMemo, useCallback, useEffect } = React;
@@ -50,6 +53,31 @@
         const ALL_LESSONS = COURSE_DATA.flatMap(module => module.lessons);
 
         // --- COMPONENTS ---
+
+        // NEW: AdBlocker Overlay Component
+        const AdBlockerOverlay = () => (
+            <div className="fixed inset-0 bg-gray-900 bg-opacity-90 flex items-center justify-center z-50 p-4">
+                <div className="bg-white p-8 md:p-12 rounded-lg shadow-2xl border border-gray-300 max-w-lg text-center mx-auto">
+                    <svg className="w-16 h-16 text-red-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 18a6 6 0 006-6c0-1.657-1.343-3-3-3s-3 1.343-3 3a6 6 0 006 6z"></path></svg>
+                    <h2 className="text-2xl font-bold text-gray-800">Ad Blocker Detected</h2>
+                    <p className="text-gray-600 mt-4">
+                        To access this free course, please disable your ad blocker for this site.
+                    </p>
+                    <p className="text-gray-600 mt-2">
+                        Ads help us keep this content free for everyone. We promise they won't be intrusive.
+                    </p>
+                    <div className="mt-6 text-sm bg-gray-100 p-3 rounded-md text-left text-gray-500">
+                        <strong>How to disable:</strong>
+                        <ol className="list-decimal list-inside mt-1">
+                            <li>Find the ad blocker icon in your browser's toolbar.</li>
+                            <li>Click it and choose "Pause on this site" or "Don't run on pages on this domain".</li>
+                            <li>Refresh the page.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        );
+
         const CopyButton = ({ textToCopy }) => {
             const [isCopied, setIsCopied] = useState(false);
             const copyToClipboard = () => {
@@ -121,14 +149,19 @@
                             </div>
                             <div className="p-6"><pre><code className="font-mono text-sm text-white">{lesson.codeExample}</code></pre></div>
                         </div>
-                        <div className="mt-8 text-right">
+                        
+                        {/* --- AD CONTAINER NEW PLACEMENT --- */}
+                        <div className="my-8 flex justify-center items-center">
+                            <div id="container-b31976d08e424f1df16c600bd9425c89"></div>
+                        </div>
+
+                        <div className="text-right">
                             <button onClick={onComplete} className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-transform transform hover:scale-105">
                                 {isLastLesson ? 'Finish Course' : 'Next Lesson →'}
                             </button>
                         </div>
                     </div>
                     <footer className="max-w-4xl mx-auto w-full mt-12 pt-4 border-t text-center text-gray-500 text-sm">
-                        <div id="container-b31976d08e424f1df16c600bd9425c89"></div>
                         <p>@ILoveTalk</p>
                         <p>Created by Mr Deepak</p>
                     </footer>
@@ -140,7 +173,23 @@
             const [currentLessonId, setCurrentLessonId] = useState(ALL_LESSONS[0].id);
             const [completedLessons, setCompletedLessons] = useState(new Set());
             const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+            // NEW: State for ad blocker detection
+            const [adBlockerDetected, setAdBlockerDetected] = useState(false);
             
+            // NEW: Ad blocker detection logic
+            useEffect(() => {
+                // We check after a small delay to give the ad blocker scripts time to run and hide the element.
+                const checkAdBlocker = setTimeout(() => {
+                    const adTestElement = document.getElementById('ad-test-container');
+                    if (adTestElement && adTestElement.offsetHeight === 0) {
+                        console.warn("Ad Blocker has been detected. Blocking content.");
+                        setAdBlockerDetected(true);
+                    }
+                }, 100);
+
+                return () => clearTimeout(checkAdBlocker); // Cleanup on component unmount
+            }, []);
+
             const currentLesson = useMemo(() => ALL_LESSONS.find(l => l.id === currentLessonId), [currentLessonId]);
             const currentLessonIndex = useMemo(() => ALL_LESSONS.findIndex(l => l.id === currentLessonId), [currentLessonId]);
 
@@ -152,6 +201,11 @@
                 else { alert("Congratulations! You have completed the entire Python course."); }
             }, [currentLessonId, currentLessonIndex, completedLessons]);
             
+            // Conditional rendering: Show overlay or the app
+            if (adBlockerDetected) {
+                return <AdBlockerOverlay />;
+            }
+
             return (
                 <div className="flex h-screen overflow-hidden">
                     <Sidebar courseData={COURSE_DATA} completedLessons={completedLessons} currentLessonId={currentLessonId} onSelectLesson={handleSelectLesson} isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
