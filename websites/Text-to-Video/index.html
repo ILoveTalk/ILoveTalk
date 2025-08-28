@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InstaVideo - Text to Video Generator</title>
+    <style>
+        /* Basic reset to remove default browser margins */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden; /* Prevents scrollbars on the main page */
+            font-family: sans-serif;
+            background-color: #f0f0f0; /* Fallback background color */
+        }
+
+        /* Flexbox container to manage the layout */
+        .page-container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh; /* Full viewport height */
+        }
+
+        /* Styling for the ad containers (top and bottom) */
+        .ad-container {
+            flex-shrink: 0; /* Prevents the ad container from shrinking */
+            width: 100%;
+            background-color: #fff; /* A background for the ad area */
+            border-bottom: 1px solid #ddd;
+        }
+
+        .ad-container.top {
+            height: 90px; /* Standard banner ad height */
+        }
+        
+        .ad-container.bottom {
+            height: 90px; /* Standard banner ad height */
+            border-top: 1px solid #ddd;
+            border-bottom: none;
+        }
+
+        /* Main content area that will hold the primary website */
+        .main-content {
+            flex-grow: 1; /* Allows this element to grow and fill available space */
+            overflow: hidden; /* Hides any overflow from the iframe */
+        }
+
+        /* Styling for all iframes to be seamless */
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none; /* No ugly borders */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-container">
+        
+        <!-- === TOP ADVERTISEMENT === -->
+        <div class="ad-container top">
+            <iframe 
+                src="https://ilovetalk.github.io/ILoveTalk/websites/ads.html" 
+                title="Advertisement Top Banner"
+                sandbox="allow-scripts allow-same-origin allow-popups">
+            </iframe>
+        </div>
+
+        <!-- === MAIN APPLICATION === -->
+        <div class="main-content">
+            <iframe 
+                src="https://jbilcke-hf-instavideo.hf.space/?__theme=system" 
+                title="Main Video Generation Application"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <!-- === BOTTOM ADVERTISEMENT === -->
+        <div class="ad-container bottom">
+            <iframe 
+                src="https://ilovetalk.github.io/ILoveTalk/websites/ads.html" 
+            </iframe>
+        </div>
+
+    </div>
+
+</body>
+</html>
