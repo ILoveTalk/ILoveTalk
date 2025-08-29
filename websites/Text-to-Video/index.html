@@ -16,16 +16,45 @@
             background-color: #f0f0f0; /* Fallback background color */
         }
 
-            iframe {
+        /* Flexbox container to manage the layout */
+        .page-container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh; /* Full viewport height */
+        }
+
+        /* Styling for the ad containers (top and bottom) */
+        .ad-container {
+            flex-shrink: 0; /* Prevents the ad container from shrinking */
             width: 100%;
-            height: 100vh;
+            background-color: #fff; /* A background for the ad area */
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .ad-container.bottom {
+            height: 90px; /* Standard banner ad height */
+            border-top: 1px solid #ddd;
+            border-bottom: none;
+        }
+
+        /* Main content area that will hold the primary website */
+        .main-content {
+            flex-grow: 1; /* Allows this element to grow and fill available space */
+            overflow: hidden; /* Hides any overflow from the iframe */
+        }
+
+        /* Styling for all iframes to be seamless */
+        iframe {
+            width: 100%;
+            height: 100%;
             border: none; /* No ugly borders */
         }
     </style>
-    <script async="async" data-cfasync="false" src="//pl27488196.revenuecpmgate.com/b31976d08e424f1df16c600bd9425c89/invoke.js"></script>
-    <script type='text/javascript' src='//pl27536513.revenuecpmgate.com/0e/ba/e1/0ebae14a2c4fd17023b876ff5b6e280b.js'></script>
 </head>
 <body>
+
+    <div class="page-container">
+
         <!-- === MAIN APPLICATION === -->
         <div class="main-content">
             <iframe 
@@ -35,6 +64,14 @@
                 allowfullscreen>
             </iframe>
         </div>
-<div id="container-b31976d08e424f1df16c600bd9425c89"></div>
+
+        <!-- === BOTTOM ADVERTISEMENT === -->
+        <div class="ad-container bottom">
+            <iframe 
+                src="https://ilovetalk.github.io/ILoveTalk/websites/ads.html" 
+            </iframe>
+        </div>
+
+    </div>
 </body>
 </html>
