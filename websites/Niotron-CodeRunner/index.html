@@ -1,1 +1,192 @@
-d
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessing CodeRunner Hub...</title>
+    <style>
+        /* Modern Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@400&display=swap');
+
+        :root {
+            --glow-color-1: #4A90E2; /* Blue */
+            --glow-color-2: #50E3C2; /* Teal */
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden; /* Hide scrollbars */
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #0d1117; /* Dark GitHub Black */
+            color: #ffffff;
+            display: flex;
+            flex-direction: column; /* To stack main content and footer */
+            justify-content: center; /* Center main content */
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        /* Animated Background Gradient */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: radial-gradient(circle at 50% 50%, rgba(13, 17, 23, 0), #0d1117 70%), 
+                        linear-gradient(135deg, rgba(74, 144, 226, 0.1) 0%, rgba(80, 227, 194, 0.1) 100%);
+            animation: background-pan 20s linear infinite;
+            z-index: 1;
+        }
+        
+        @keyframes background-pan {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Main Content Styling */
+        .content {
+            z-index: 10;
+            flex-grow: 1; /* Takes up available space */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin: 0;
+            text-shadow: 0 0 10px var(--glow-color-1), 0 0 20px var(--glow-color-1);
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #c9d1d9; /* Lighter text color */
+            margin-top: 15px;
+            max-width: 600px;
+        }
+        
+        /* THE HERO BUTTON */
+        .cta-button {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 20px 40px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #ffffff;
+            text-decoration: none;
+            border: 2px solid var(--glow-color-2);
+            border-radius: 50px;
+            background-color: transparent;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px 0 var(--glow-color-2), inset 0 0 10px 0 var(--glow-color-2);
+            animation: pulse 2s infinite;
+        }
+
+        .cta-button:hover {
+            color: #0d1117;
+            background-color: var(--glow-color-2);
+            box-shadow: 0 0 25px 0 var(--glow-color-2);
+            animation-play-state: paused;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* Ad Footer - This will stick to the bottom */
+        .ad-footer {
+            width: 100%;
+            z-index: 20;
+            background-color: rgba(0,0,0,0.3);
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap; /* Ads will wrap on smaller screens */
+            gap: 15px;
+        }
+        
+        /* Media query for smaller screens */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            p { font-size: 1rem; }
+            .cta-button { font-size: 1.2rem; padding: 15px 30px; }
+            .ad-footer { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content">
+        <h1>Welcome, Developer</h1>
+        <p>You are about to access the official hub for CodeRunner AIX. Unlock the true power of your Niotron projects now.</p>
+        
+        <a href="https://neverpaid.blogspot.com/2025/09/niotron-coderunner.html" class="cta-button" id="main-redirect-button">
+            Proceed to the Guide
+        </a>
+    </div>
+
+    <!-- ========= VISIBLE AD SECTION - PLACED AT THE BOTTOM FOR CLEAN UI ========= -->
+    <footer class="ad-footer">
+        
+        <!-- Ad 1: Banner -->
+        <div id="ad-unit-1">
+            <script async="async" data-cfasync="false" src="//pl27488196.revenuecpmgate.com/b31976d08e424f1df16c600bd9425c89/invoke.js"></script>
+            <div id="container-b31976d08e424f1df16c600bd9425c89"></div>
+        </div>
+
+        <!-- Ad 2: Small Banner -->
+        <div id="ad-unit-2">
+            <script type="text/javascript">
+                atOptions = {
+                    'key' : 'a2035e3acaba5d13e21b336128b252fa', 'format' : 'iframe', 'height' : 60, 'width' : 468, 'params' : {}
+                };
+            </script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/a2035e3acaba5d13e21b336128b252fa/invoke.js"></script>
+        </div>
+
+        <!-- Ad 3: Medium Rectangle -->
+        <div id="ad-unit-3">
+             <script type="text/javascript">
+                atOptions = {
+                    'key' : 'fe0af7302ef52b8a95690f08ee6c03b0', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {}
+                };
+            </script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/fe0af7302ef52b8a95690f08ee6c03b0/invoke.js"></script>
+        </div>
+
+        <!-- Ad 4: Skyscraper (might not show on small spaces, but placed legally) -->
+        <div id="ad-unit-4">
+            <script type="text/javascript">
+                atOptions = {
+                    'key' : '2540d2a9b5e812de562f4b2f2484974b', 'format' : 'iframe', 'height' : 600, 'width' : 160, 'params' : {}
+                };
+            </script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/2540d2a9b5e812de562f4b2f2484974b/invoke.js"></script>
+        </div>
+
+    </footer>
+
+    <!-- ========= NON-VISIBLE & POP-UP AD SCRIPTS - PLACED BEFORE </body> FOR BEST PERFORMANCE ========= -->
+    <script type='text/javascript' src='//pl27601319.revenuecpmgate.com/da/e3/bb/dae3bbb066215f4a69c78d90f7f901ec.js'></script>
+    <script type='text/javascript' src='//pl27536513.revenuecpmgate.com/0e/ba/e1/0ebae14a2c4fd17023b876ff5b6e280b.js'></script>
+
+</body>
+</html>
