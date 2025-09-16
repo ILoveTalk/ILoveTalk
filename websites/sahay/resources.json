@@ -1,47 +1,42 @@
 [
   {
-    "id": "stress-meditation-001",
-    "title": "10-Minute Meditation For Stress",
+    "id": "stress-exam-tips-006",
+    "title": "How to Deal With Exam Stress",
     "category": "Stress",
+    "tags": ["exam stress", "study tips", "academic pressure", "anxiety", "student life"],
     "type": "video",
-    "imageUrl": "https://i.ytimg.com/vi/z6X5oEIg6Ak/hq720.jpg",
-    "description": "A short, guided meditation session to help you release stress and find a moment of calm.",
-    "link": "https://www.youtube.com/watch?v=z6X5oEIg6Ak"
+    "imageUrl": "https://i.ytimg.com/vi/vB52g69UIg8/hq720.jpg",
+    "description": "An animated video providing practical strategies for managing stress and anxiety before and during exams.",
+    "link": "https://www.youtube.com/watch?v=vB52g69UIg8"
   },
   {
-    "id": "anxiety-management-article-002",
-    "title": "Coping With Anxiety: 11 Simple Ways",
+    "id": "anxiety-tools-article-007",
+    "title": "10 Tools to Calm Your Anxious Mind",
     "category": "Anxiety",
+    "tags": ["anxiety", "worry", "coping skills", "self-help", "mental wellness"],
     "type": "article",
-    "imageUrl": "https://www.psychologytoday.com/sites/default/files/styles/og_image/public/2021-08/pexels-george-milton-7014430_0.jpg?itok=3V2Zo9EC",
-    "description": "Practical, evidence-based tips and techniques to manage and reduce feelings of anxiety.",
-    "link": "https://www.psychologytoday.com/us/blog/anxiety-zen/201605/11-simple-ways-deal-anxiety"
+    "imageUrl": "https://images.squarespace-cdn.com/content/v1/5c379a249d5abbd04f2956c3/972d0da3-2a3b-4861-a5d6-b07a38b584df/unsplash-image-cqiA0A8Xk2Y.jpg",
+    "description": "An article from 'Goodful' outlining ten actionable techniques you can use to find relief when feeling anxious.",
+    "link": "https://www.goodful.com/article/10-tools-calm-anxious-mind"
   },
   {
-    "id": "focus-ted-talk-003",
-    "title": "How to Get Your Brain to Focus | Chris Bailey | TEDxManchester",
-    "category": "Focus",
+    "id": "habits-atomic-summary-008",
+    "title": "Atomic Habits: How to Get 1% Better Every Day",
+    "category": "Habits",
+    "tags": ["habits", "self-improvement", "productivity", "behavior change", "atomic habits"],
     "type": "video",
-    "imageUrl": "https://i.ytimg.com/vi/oPEdD3ANHwU/hq720.jpg",
-    "description": "A practical TED talk explaining the science of attention and how to improve your focus intentionally.",
-    "link": "https://www.youtube.com/watch?v=oPEdD3ANHwU"
+    "imageUrl": "https://i.ytimg.com/vi/PZ7lDrwYdZc/hq720.jpg",
+    "description": "A fantastic animated summary of James Clear's bestselling book on how tiny changes lead to remarkable results.",
+    "link": "https://www.youtube.com/watch?v=PZ7lDrwYdZc"
   },
   {
-    "id": "mindfulness-article-004",
-    "title": "How to Practice Mindfulness",
-    "category": "Mindfulness",
-    "type": "article",
-    "imageUrl": "https://www.mindful.org/wp-content/uploads/2022/09/Person-meditating-on-rock-in-still-water-body-of-water.jpg",
-    "description": "A beginner's guide from Mindful.org that explains what mindfulness is and a simple exercise to start.",
-    "link": "https://www.mindful.org/how-to-practice-mindfulness/"
-  },
-  {
-    "id": "sleep-health-video-005",
-    "title": "Sleep is Your Superpower | Matt Walker",
-    "category": "Health",
+    "id": "relationships-talk-009",
+    "title": "What Makes a Good Life? Lessons from a Long Study on Happiness",
+    "category": "Relationships",
+    "tags": ["relationships", "happiness", "connection", "loneliness", "TED talk"],
     "type": "video",
-    "imageUrl": "https://i.ytimg.com/vi/5MuIMiJcEwA/hq720.jpg",
-    "description": "An incredibly popular TED talk explaining the critical importance of sleep for learning, memory, and emotional well-being.",
-    "link": "https://www.youtube.com/watch?v=5MuIMiJcEwA"
+    "imageUrl": "https://i.ytimg.com/vi/8KkKuTCFvzI/hq720.jpg",
+    "description": "A powerful TED talk on the paramount importance of healthy, supportive relationships for long-term happiness and well-being.",
+    "link": "https://www.youtube.com/watch?v=8KkKuTCFvzI"
   }
 ]
