@@ -478,32 +478,6 @@
     <script>
     document.addEventListener('DOMContentLoaded', () => {
 
-        // --- ADVERTISEMENT LOGIC ---
-        const openAdRedirect = () => {
-            window.open('https://www.revenuecpmgate.com/ibhwtzuijy?key=d500165318a9a5dd51c216787ebc210a', '_blank', 'noopener,noreferrer');
-        };
-        
-        // Add redirect to any relevant click
-        document.body.addEventListener('click', (e) => {
-            if (e.target.closest('a, button')) {
-                 openAdRedirect();
-            }
-        });
-
-        const initContainerAd = (containerId) => {
-            const adContainer = document.getElementById(containerId);
-            if (adContainer && !adContainer.hasChildNodes()) {
-                const script = document.createElement('script');
-                script.async = true;
-                script.setAttribute('data-cfasync', 'false');
-                script.src = "//pl27488196.revenuecpmgate.com/b31976d08e424f1df16c600bd9425c89/invoke.js";
-                const adDiv = document.createElement('div');
-                adDiv.id = 'container-' + containerId.split('-')[2] + '-ad'; // e.g. container-b319...
-                adContainer.appendChild(adDiv);
-                adDiv.appendChild(script);
-            }
-        };
-
         const initIframeAd = (containerId) => {
              const adContainer = document.getElementById(containerId);
              if (adContainer && !adContainer.hasChildNodes()) {
